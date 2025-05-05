@@ -1,0 +1,31 @@
+<div
+  class="window"
+  cdkDrag
+  [ngStyle]="getStyle()"
+  [cdkDragBoundary]="'.desktop'"
+  (mousedown)="onFocus($event)"
+>
+  <!-- Title Bar (Drag Handle) -->
+  <div class="title-bar" cdkDragHandle>
+    <span class="title">{{ window.title }}</span>
+    <div class="controls">
+      <button (click)="onMinimize($event)">_</button>
+      <button (click)="onToggleMaximize($event)">☐</button>
+      <button (click)="onClose($event)">×</button>
+    </div>
+  </div>
+
+  <!-- Window Content -->
+  
+  <div class="content">
+    @if(window){
+      <ng-container
+      [ngComponentOutlet]="window.component"
+      [ngComponentOutletInjector]="createInjector()"
+    ></ng-container>
+    }
+
+  </div>
+
+
+</div>

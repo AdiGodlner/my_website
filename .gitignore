@@ -1,0 +1,59 @@
+# === FRONTEND (Angular) ===
+/front/node_modules/
+/front/dist/
+/front/.angular/cache/
+/front/.angular/
+
+# Optional: exclude environment files
+/front/src/environments/environment*.ts
+
+# === BACKEND (Spring Boot / Java) ===
+/back/target/
+/back/.classpath
+/back/.project
+/back/.settings/
+/back/*.iml
+/back/.idea/
+
+# Maven or Gradle wrappers
+/back/.mvn/
+/back/mvnw
+/back/mvnw.cmd
+/back/gradlew
+/back/gradlew.bat
+/back/gradle/
+!/back/gradle/wrapper/gradle-wrapper.jar
+
+# Logs and temporary files
+/back/logs/
+*.log
+
+# Local environment or secret config
+/back/.env
+
+# === GENERAL ===
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+*.old
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# === Optional ===
+# Root-level lock files if you manage frontend/backend dependencies globally
+package-lock.json
+yarn.lock
+pnpm-lock.yaml

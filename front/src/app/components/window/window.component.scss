@@ -1,0 +1,82 @@
+.window {
+    position: absolute;
+    background: #1e1e2f; // Dark purple-ish background
+    border: 1px solid #3a3a4d;
+    border-radius: 6px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+    min-width: 300px;
+    min-height: 200px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    color: #e0e0f0;
+    font-family: "Ubuntu", sans-serif;
+    overflow: hidden;
+  }
+  
+  .title-bar {
+    background: linear-gradient(to right, #3a0ca3, #7209b7); // Deep violet gradient
+    color: #ffffff;
+    padding: 0.4rem 0.75rem;
+    cursor: move;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+  }
+  
+  .title {
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+  
+  .controls {
+    display: flex;
+    gap: 0.4rem;
+  
+    button {
+      width: 22px;
+      height: 22px;
+      padding: 0;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      transition: background 0.2s ease;
+  
+      &:nth-child(1) {
+        background: #44475a;
+        &:hover {
+          background: #6272a4;
+        }
+      }
+  
+      &:nth-child(2) {
+        background: #44475a;
+        &:hover {
+          background: #50fa7b;
+          color: #1e1e2f;
+        }
+      }
+  
+      &:nth-child(3) {
+        background: #ff5555;
+        &:hover {
+          background: #ff6e6e;
+          color: #1e1e2f;
+        }
+      }
+    }
+  }
+  
+  .content {
+    flex-grow: 1;
+    padding: 1rem;
+    overflow: auto;
+  }
+  

@@ -1,0 +1,46 @@
+
+.icon-wrap{
+
+  width: 6rem;
+  height: 6rem;
+  margin: 0.5rem;
+}
+
+
+.icon {
+  width: 80px;
+  height: 80px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 8px;
+  text-align: center;
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+
+  &.selected {
+    border-color: #9370db; /* Purple highlight */
+    background-color: rgba(147, 112, 219, 0.2);
+  }
+
+  &:hover {
+    color: #fff;
+  }
+
+  .icon-image {
+    width: 48px;
+    height: 48px;
+  }
+
+  .icon-label {
+    margin-top: 4px;
+    font-size: 12px;
+    color: white;
+    word-wrap: break-word;
+    text-align: center;
+  }
+}

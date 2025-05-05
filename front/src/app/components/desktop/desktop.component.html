@@ -1,0 +1,58 @@
+
+
+<div 
+  #desktopRef  
+  class="desktop" 
+  (mousedown)="onDesktopMouseDown($event)" 
+  (mousemove)="onDesktopMouseMove($event)" 
+  (mouseup)="onDesktopMouseUp()"
+  cdkdrop
+>
+
+
+  @for (desktopFile of desktopFiles; track desktopFile.id) {
+
+
+    <app-icon
+
+      [id]="desktopFile.id"
+      [label]="desktopFile.name"
+      [iconUrl]="desktopFile.iconUrl"
+      [isSelected]="desktopFile.selected"
+      [dragBoundary]="'.desktop'"
+      (clicked)="onIconClicked($event)"
+      (doubleClicked)="onIconDoubleClicked(desktopFile)">
+    </app-icon>
+
+
+  }
+
+<!-- open windows -->
+
+@for (openWindow of openWindows; track openWindow.id) {
+
+  <app-window
+    [window] = "openWindow"
+    (focus) = "focusWindow(openWindow.id)"
+    (minimize) = "minimizeWindow(openWindow.id)"
+    (toggleMaximize) = toggleMaximize(openWindow.id)
+    (close) = "closeWindow(openWindow.id)"
+  >
+
+  </app-window>
+
+}
+
+<!-- Selection Box -->
+  @if (selectionBox) {
+    <div 
+      class="selection-box" 
+      [style.top.px]="selectionBox.top"
+      [style.left.px]="selectionBox.left"
+      [style.width.px]="selectionBox.width"
+      [style.height.px]="selectionBox.height">
+    </div>
+    }
+
+</div>
+  

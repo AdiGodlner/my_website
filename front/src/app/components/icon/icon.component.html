@@ -1,0 +1,16 @@
+<div
+class="icon-wrap"
+[cdkDragBoundary]="dragBoundary"
+(mousedown)="$event.stopPropagation()"
+cdkDrag >
+
+  <div
+    class="icon"
+    [class.selected]="isSelected"
+    (mousedown)="handleClick($event)"
+    (dblclick)="handleDoubleClick($event)"
+  >
+    <img [src]="iconUrl" alt="{{ label }}" class="icon-image" />
+    <div class="icon-label">{{ label }}</div>
+  </div>
+</div>
