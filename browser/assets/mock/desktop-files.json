@@ -1,0 +1,32 @@
+[
+    {
+      "id": "1",
+      "name": "notes",
+      "iconUrl": "assets/icons/txt.svg",
+      "type": "text",
+      "selected": false
+    },
+    {
+      "id": "2",
+      "name": "cv",
+      "iconUrl": "assets/icons/pdf.svg",
+      "type": "pdf",
+      "selected": false
+    },
+    {
+      "id": "3",
+      "name": "Program.exe",
+      "iconUrl": "assets/icons/exe.svg",
+      "type": "exe",
+      "selected": false
+    },
+    {
+      "id": "4",
+      "name": "Projects",
+      "iconUrl": "assets/icons/dir.svg",
+      "type": "directory",
+      "selected": false
+    }
+    
+  ]
+  
